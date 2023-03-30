@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu&display=swap');
+
+/* font-family: 'Ubuntu', */
+/* sans-serif; */ 
+
+:root{
+    --blue-background:rgb(73, 164, 225)
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+#main-page{
+    background: #dfd8d8;
+    height:100vh;
+    max-width: 100vw;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider-area{
+    height:90vh;
+    width:70vw;
+    /* border: 3px solid black; */
+    display:grid;
+    grid-template-columns: 1fr 4.5fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas: 
+    'header header header'
+    'left-btn main right-btn'
+    'footer footer footer';
+}
+
+.dash{
+    color:var(--blue-background);
+    font-size: 1.6rem;
+    margin-right:8px;
+}
+
+#slider-area-header{
+    font-size: 2.5rem;
+    grid-area: header;
+    font-family: 'Ubuntu',
+        sans-serif;;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.side{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-btn{
+    cursor: pointer;
+    height:50px;
+    width:40px;
+    background: rgb(81, 81, 81);
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    color:white;
+    transform: translateY(-40px);
+}
+
+.left-btn{
+    grid-area: left-btn;
+}
+
+
+
+.right-btn{
+    grid-area: right-btn;
+}
+
+.slider-main-area{
+    grid-area: main;
+    position:relative;
+    overflow: hidden;
+}
+
+.slide{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all 0.8s ease-in-out;
+}
+
+img{
+    height:140px;
+    width:140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid 4px white;
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    margin-bottom:9px;
+}
+
+h2{
+    font-size: 1rem;
+    letter-spacing: 0.08rem;
+    color:var(--blue-background);
+    margin-bottom: 5px;
+}
+
+h3{
+    font-size: 1rem;
+        letter-spacing: 0.08rem;
+        color: rgb(108, 102, 102);
+    margin-bottom: 14px;
+    }
+
+p{
+    width:80%;
+    font-size: 0.9rem;
+    font-weight: 600;
+        letter-spacing: 0.04rem;
+        color: rgb(108, 102, 102);
+    text-align: center;
+    }
+
+
+.footer{
+    grid-area: footer;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.indicators{
+    /* flex:4; */
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 280px;
+    transform: translateX(160px);
+    /* margin-right: 200px; */
+}
+
+.dot{
+    height:30px;
+    width:30px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.active{
+    background: #333;
+    border: 5px solid #f4f4f4;
+}
+
+.cube{
+    /* flex:1; */
+    cursor: pointer;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    /* transform: translateX(150px) ; */
+    /* margin-left: 200px; */
+    /* margin-left:60px; */
+}
+
+
+@keyframes shake {
+    0% {
+        -webkit-transform: translate(2px, 1px) rotate(0deg);
+    }
+
+    10% {
+        -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        -webkit-transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        -webkit-transform: translate(0px, 2px) rotate(0deg);
+    }
+
+    40% {
+        -webkit-transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        -webkit-transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        -webkit-transform: translate(2px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        -webkit-transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        -webkit-transform: translate(2px, 2px) rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.shake:hover {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    transform-origin: 50% 50%;
+    animation-iteration-count: infinite;
+}
+
+/* .shake {
+    /* display: inline-block */
+/* }  */

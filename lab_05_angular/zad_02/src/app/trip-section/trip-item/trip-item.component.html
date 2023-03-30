@@ -1,0 +1,89 @@
+<div
+  class="trip-item"
+  [ngClass]="{
+    low: avaiable <= 3 && avaiable > 0,
+    sold: avaiable === 0,
+    greatest: trip.price === maxPrice,
+    lowest: trip.price === minPrice
+  }"
+>
+  <div class="delete-btn" (click)="tripDestroy()">Delete</div>
+  <div
+    (click)="moveToDetails()"
+    class="trip-img"
+    [style.background]="
+      'url(' + trip.img + ')' + ' no-repeat center center/cover'
+    "
+  ></div>
+  <div class="trip-desc">
+    <div class="positioner">
+      <h2 class="text-item highlight">TripName</h2>
+      <h3>{{ trip.name | uppercase }}</h3>
+      <h2 class="text-item highlight">Destination</h2>
+      <h3>{{ trip.destination | uppercase }}</h3>
+
+      <h2 class="text-item highlight">Starts on:</h2>
+      <h3>{{ trip.startDate }}</h3>
+
+      <h2 class="text-item highlight">Ends on:</h2>
+      <h3>{{ trip.endDate }}</h3>
+    </div>
+    <div class="positioner">
+      <h2 class="text-item highlight p-header">Few words about ...</h2>
+      <p>
+        {{ trip.description }}
+      </p>
+      <h2 class="text-item highlight p-price">Price</h2>
+      <h3 class="dollar-amount">
+        {{ trip.price | currency : "EUR" }} <span class="dollar"> </span>
+      </h3>
+    </div>
+  </div>
+  <div class="avaiable">
+    <h2
+      [ngStyle]="{
+        color: avaiable <= 3 ? (avaiable == 0 ? 'red' : 'orange') : '#f4f4f4'
+      }"
+    >
+      {{
+        avaiable > 0
+          ? "Avaiability: " + avaiable
+          : "Currently all slots are reserved"
+      }}
+    </h2>
+  </div>
+  <div class="trip-stats">
+    <div
+      class="minus"
+      [ngClass]="{ fade: avaiable === maxnum }"
+      (click)="tripReturn()"
+    >
+      -
+    </div>
+    <div class="rating">
+      <!-- <app-star
+        *ngFor="let i of stars"
+        [starId]="i"
+        [rating]="hoverState || rating"
+        (starEnter)="onStarEnter($event)"
+        (starLeave)="onStarLeave()"
+        (starClicked)="onStarClicked($event)"
+      >
+      </app-star> -->
+      <div
+        class="star"
+        *ngFor="let i of stars"
+        [ngClass]="{ fill: i <= rating }"
+      >
+        <fa-icon [icon]="faStar" [ngClass]="{ fill: i <= rating }"></fa-icon>
+      </div>
+    </div>
+    <div
+      class="plus"
+      [ngClass]="{ hidden: avaiable === 0 }"
+      (click)="tripAdd()"
+    >
+      +
+    </div>
+  </div>
+</div>

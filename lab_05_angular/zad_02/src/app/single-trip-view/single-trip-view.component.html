@@ -1,0 +1,179 @@
+<div class="page">
+  <div class="row">
+    <div class="info-div">
+      <h1 class="title header">
+        <span class="highlight"> Trip Title </span>: {{ trip.name }}
+      </h1>
+      <h1 class="destination header">
+        <span class="highlight"> Trip destination</span>: {{ trip.destination }}
+      </h1>
+      <h1 class="price header">
+        <span class="highlight"> Price</span>:
+        {{ trip.price | currency : "EUR" }}
+      </h1>
+      <p class="desc">
+        {{ trip.description }}
+      </p>
+    </div>
+    <div class="tmp">
+      <div class="img-slider">
+        <div class="slider-item">
+          <img src="/assets/img/antalya.jpg" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="/assets/img/teneryfa.jpg" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="/assets/img/rzym.jpg" alt="" />
+        </div>
+        <div class="left-btn slider-btn" (click)="prevSlide()">
+          <fa-icon [icon]="faAngleLeft"></fa-icon>
+        </div>
+        <div class="right-btn slider-btn" (click)="nextSlide()">
+          <fa-icon [icon]="faAngleRight"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h1 class="header rating-header">Ratings</h1>
+      <div class="rating">
+        <app-star
+          class="enlarge"
+          *ngFor="let i of stars"
+          [starId]="i"
+          [rating]="hoverState || rating"
+          (starEnter)="onStarEnter($event)"
+          (starLeave)="onStarLeave()"
+          (starClicked)="onStarClicked($event)"
+        >
+        </app-star>
+      </div>
+    </div>
+    <div class="col">
+      <h1 class="header rating-header">Rate num</h1>
+      <h1 class="rate-num">{{ rating == 0 ? 0 : 1 }}</h1>
+    </div>
+    <div class="col">
+      <div
+        *ngIf="avaiableNum < trip.places"
+        class="book-btn minus-btn"
+        (click)="unbookTrip()"
+      >
+        -
+      </div>
+    </div>
+    <div class="col">
+      <h1 class="header rating-header">Avaibility</h1>
+      <h1 class="rate-num">{{ avaiableNum }}</h1>
+    </div>
+    <div class="col">
+      <div
+        *ngIf="avaiableNum > 0"
+        class="book-btn plus-btn"
+        (click)="bookTrip()"
+      >
+        +
+      </div>
+    </div>
+  </div>
+  <div class="row2 opinion-header-div">
+    <h1 class="header opinion-header">Leave your opinion</h1>
+    <h1 class="header opinion-header">Opinions</h1>
+  </div>
+  <div class="row2 form-div">
+    <form class="form" [formGroup]="opinionForm">
+      <div class="form-group">
+        <label class="form-header">Nick</label>
+        <input type="text" class="data-input" formControlName="nick" />
+      </div>
+      <div class="form-group">
+        <label class="form-header">Trip Name</label>
+        <input type="text" class="data-input" formControlName="tripName" />
+      </div>
+      <div class="form-group">
+        <label class="form-header">Your opinion</label>
+        <textarea
+          class="opinion-area data-input"
+          cols="40"
+          rows="10"
+          formControlName="opinion"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-header">Purchase/trip date</label>
+        <input
+          type="date"
+          class="date-input data-input"
+          formControlName="date"
+        />
+      </div>
+      <button class="submit-btn" (click)="submitOpinion()">Add opinion</button>
+    </form>
+    <div class="left-centre">
+      <div class="opinions-list-div">
+        <div class="opinion" *ngFor="let opinion of opinions">
+          <h2 class="opinion-item-header">
+            <span class="highlight"> NICK</span> {{ opinion.nick }}
+          </h2>
+          <h2 class="opinion-item-header">
+            <span class="highlight">TRIPNAME</span> {{ opinion.tripName }}
+          </h2>
+          <h2 class="opinion-item-header">
+            <span class="highlight">Date</span
+            >{{ opinion.date ? opinion.date : "Unspecified" }}
+          </h2>
+          <p class="opinion-content">
+            {{ opinion.opinion }}
+          </p>
+        </div>
+        <!-- <div class="opinion">
+          <h2 class="opinion-item-header">
+            <span class="highlight"> NICK</span> Barburs
+          </h2>
+          <h2 class="opinion-item-header">
+            <span class="highlight">TRIPNAME</span> Essa
+          </h2>
+          <h2 class="opinion-item-header">
+            <span class="highlight">Date</span>20.03
+          </h2>
+          <p class="opinion-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+            nostrum aut amet!
+          </p>
+        </div>
+        <div class="opinion">
+          <h2 class="opinion-item-header">
+            <span class="highlight"> NICK</span> Barburs
+          </h2>
+          <h2 class="opinion-item-header">
+            <span class="highlight">TRIPNAME</span> Essa
+          </h2>
+          <h2 class="opinion-item-header">
+            <span class="highlight">Date</span>20.03
+          </h2>
+          <p class="opinion-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+            nostrum aut amet!
+          </p>
+        </div>
+        <div class="opinion">
+          <h2 class="opinion-item-header">
+            <span class="highlight"> NICK</span> Barburs
+          </h2>
+          <h2 class="opinion-item-header">
+            <span class="highlight">TRIPNAME</span> Essa
+          </h2>
+          <h2 class="opinion-item-header">
+            <span class="highlight">Date</span>20.03
+          </h2>
+          <p class="opinion-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+            nostrum aut amet!
+          </p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

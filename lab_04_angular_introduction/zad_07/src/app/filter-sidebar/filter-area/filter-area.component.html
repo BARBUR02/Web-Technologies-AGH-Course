@@ -1,0 +1,51 @@
+<h2 class="country-header">Click below to select countries</h2>
+<div class="country-list">
+  <div class="country-item" *ngFor="let trip of trips">
+    <h2>{{ trip.destination }}</h2>
+    <input
+      type="checkbox"
+      name="{{ trip.destination }}"
+      (change)="onChangeCountry()"
+      [(ngModel)]="trip.isSelected"
+    />
+  </div>
+</div>
+
+<form [formGroup]="priceForm" class="price-form">
+  <!-- <p>Low value: {{ priceForm.value.sliderControl[0] }}</p>
+  <p>High value: {{ priceForm.value.sliderControl[1] }}</p> -->
+  <label class="price-label">Price range</label>
+  <ngx-slider
+    [options]="priceOptions"
+    formControlName="sliderControl"
+    (userChangeEnd)="onChangePrice()"
+    [manualRefresh]="manualRefresh"
+    [(value)]="activePriceDown"
+    [(highValue)]="activePriceUp"
+  ></ngx-slider>
+  <button class="btn btn-price" (click)="resetPrice()">Reset</button>
+</form>
+
+<div class="row">
+  <div class="date-filter">
+    <label class="date-label">From</label>
+    <input type="date" (change)="onChangeStartDate($event)" />
+  </div>
+  <div class="date-filter">
+    <label class="date-label">To</label>
+    <input type="date" (change)="onChangeEndDate($event)" />
+  </div>
+</div>
+
+<h1 class="star-header">Stars ...</h1>
+<div class="star-filter">
+  <div class="item" *ngFor="let i of [1, 2, 3, 4, 5]">
+    <label class="star-label">{{ i }}</label>
+    <input
+      type="checkbox"
+      name="{{ i }}"
+      class="star-checkbox"
+      (change)="starCheckChange($event)"
+    />
+  </div>
+</div>

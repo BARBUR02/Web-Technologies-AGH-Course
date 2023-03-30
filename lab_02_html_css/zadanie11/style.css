@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  letter-spacing: 0.1rem;
+  line-height: 1.3rem;
+}
+
+a,
+label {
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+#main-page {
+  height: 100vh;
+  width: 100vw;
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#menu {
+  margin-top: 20px;
+  width: 400px;
+  background: rgb(216, 76, 216);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#menu ul {
+  list-style: none;
+}
+
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.4s linear;
+}
+
+/* .help-link {
+  pointer-events: none;
+} */
+
+.btn,
+.submenu-item {
+  cursor: pointer;
+  padding: 20px 15px;
+  position: relative;
+  /* border: 1px solid black; */
+  /* font-size: 1rem; */
+  transition: all 0.2s ease-in-out;
+}
+
+.submenu-item {
+  padding: 20px 36px;
+  background: rgb(48, 48, 232);
+  background: linear-gradient(
+    180deg,
+    rgb(48, 48, 232) 0%,
+    rgb(48, 48, 232) 50%,
+    rgb(48, 48, 232) 50%
+  );
+}
+
+.btn::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  bottom: -10px;
+  right: 35px;
+  background: rgb(215, 52, 52);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.submenu-item::before {
+  content: "";
+  height: 44px;
+  width: 44px;
+  position: absolute;
+  left: -24px;
+  bottom: 13%;
+  background: yellow;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.submenu-item::after {
+  content: "";
+  height: 44px;
+  width: 44px;
+  position: absolute;
+  right: -24px;
+  bottom: 13%;
+  background: yellow;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.submenu-item:hover {
+  background: linear-gradient(
+    180deg,
+    rgb(48, 48, 232) 0%,
+    rgb(48, 48, 232) 50%,
+    rgb(125, 125, 199) 50%
+  );
+  /* background: black; */
+}
+
+.submenu-item span {
+  margin-left: 30px;
+}
+
+.submenu-item:hover::before,
+.submenu-item:hover::after {
+  opacity: 1;
+}
+
+input {
+  display: none;
+}
+
+.helper {
+  display: none;
+}
+
+/* #position-1:checked ~ .submenu {
+  max-height: 100em;
+} */
+
+[id^="position"]:checked ~ .submenu {
+  max-height: 20rem;
+}
+
+/* 
+[id^="position"]:checked ~ .submenu {
+  max-height: 20rem;
+} */
+
+[id^="position"]:checked + .special {
+  background: rgb(215, 52, 52);
+}
+
+[id^="position"]:checked + .special::before {
+  opacity: 1;
+}
+
+[id^="position"]:checked + input {
+  pointer-events: none;
+}
+
+[id^="position"]:checked ~ .helper {
+  display: block;
+  background: rgb(215, 52, 52);
+}
+
+[id^="position"]:checked ~ .helper::before {
+  opacity: 1;
+}
+
+[id^="position"]:checked + .special {
+  display: none;
+}
+
+/* [id^="position"]:checked + .special > .help-link {
+  pointer-events: all;
+} */
+
+/* .help-link:target .submenu {
+  max-height: 0;
+} */
+
+@media (max-width: 800px) {
+  #menu {
+    width: 300px;
+  }
+  .btn,
+  .submenu-item {
+    padding: 16px 11px;
+  }
+
+  .submenu-item::after {
+    content: "";
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    right: -24px;
+    bottom: 10%;
+    background: yellow;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .submenu-item::before {
+    content: "";
+    height: 42px;
+    width: 42px;
+    /* display: block; */
+    margin-right: 25px;
+    position: absolute;
+    left: -24px;
+    bottom: 10%;
+    background: yellow;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 370px) {
+  #menu {
+    width: 200px;
+  }
+  .btn,
+  .submenu-item {
+    padding: 12px 19px;
+  }
+  .btn .submenu-item {
+    font-size: 0.8rem;
+  }
+
+  .submenu-item::after {
+    height: 38px;
+    width: 38px;
+    bottom: 6%;
+  }
+
+  .submenu-item::before {
+    content: "";
+    height: 38px;
+    width: 38px;
+    /* display: block; */
+    bottom: 6%;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "zadanie-05-wdai": {
+      "hosting": {
+        "zad_05": [
+          "zadanie-05-wdai"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "zadanie-05-wdai"
+  }
+}

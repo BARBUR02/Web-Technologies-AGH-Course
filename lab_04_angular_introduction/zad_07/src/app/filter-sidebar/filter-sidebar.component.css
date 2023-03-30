@@ -1,0 +1,23 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    height:100%;
+    width:100%;
+    padding: 20px 15px;
+    position: absolute;
+    background: #f4f4f4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.filler {
+    width: 100%;
+    justify-self: flex-end;
+}

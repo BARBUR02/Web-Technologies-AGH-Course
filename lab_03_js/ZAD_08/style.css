@@ -1,0 +1,126 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-page{
+    height:100vh;
+    width:100vw;
+    background-color: #333;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-content{
+    background: white;
+    padding:30px 30px;
+    width:340px;
+    border-radius: 8px;
+    /* height:380px; */
+}
+
+
+.label{
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.input-div{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 20px;
+    padding-right:  15px;
+    border: 1px lightgrey solid;
+    border-radius: 6px;
+    box-shadow: 0 0 6px  rgba(0, 0, 0, 0.4);
+}
+
+
+
+.input-area{
+    width:100%;
+    height:38px;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color:#333;
+    
+}
+
+#indicator-section{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.indicator{
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.fa-circle-xmark{
+    font-size: 0.9rem;
+    color: grey;
+    margin-right: 9px;
+}
+.fa-eye-slash, .fa-eye{
+    font-size: 0.85rem;
+}
+
+
+.satisfied{
+        font-size: 0.9rem;
+        margin-right: 9px;
+    color:teal ;
+}
+
+.focus-border{
+    border: 1.95px solid teal;
+}
+
+
+#user-info{
+    height:100px;
+    width:350px;
+    margin:20px 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    /* border: 1px solid red; */
+    
+}
+
+
+/* .fa-square-xmark{
+    color:red;
+}
+
+.fa-square-check{
+    color:green;
+} */
+
+.feedback-icon{
+    font-size: 3rem;
+    margin-right: 10px;
+    /* color: white; */
+    /* color:red; */
+}
+
+.hidden{
+    opacity:0;
+}

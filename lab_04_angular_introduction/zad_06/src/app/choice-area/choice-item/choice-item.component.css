@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 180px;
+    width:160px;
+    border-radius: 8px;
+    padding: 9px 4px;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.6);
+    margin: 0 10px;
+}
+
+h1{
+    font-size: 1.4rem;
+}
+
+p{
+    font-size: 0.7rem;
+}
+
+.btn{
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    padding: 8px 45px;
+    border-radius: 14px;
+    background: rgb(190, 18, 18);
+    color:white;
+    cursor: pointer;
+
+}

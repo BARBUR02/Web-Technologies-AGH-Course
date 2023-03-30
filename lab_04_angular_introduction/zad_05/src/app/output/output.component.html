@@ -1,0 +1,12 @@
+<div *ngIf="show">
+  <h2>{{ car?.brand }}</h2>
+  <h2>{{ car?.model }}</h2>
+  <h3 style="color: {{ color }}">{{ color }}</h3>
+  <ul>
+    <h2>Some Specification :</h2>
+    <li>Type: {{ car?.features?.type }}</li>
+    <li>Engine: {{ car?.features?.engine }}</li>
+    <li>Length: {{ car?.features?.length }}</li>
+    <li>Width: {{ car?.features?.width }}</li>
+  </ul>
+</div>

@@ -1,0 +1,49 @@
+<div class="page">
+  <div class="form-div">
+    <h1 class="filter-main-header">Filter status:</h1>
+    <form class="filters" [formGroup]="filterForm">
+      <div class="form-group">
+        <label class="filter-header">future</label>
+        <input type="checkbox" formControlName="future" (change)="onChange()" />
+      </div>
+      <div class="form-group">
+        <label class="filter-header">in-progress</label>
+        <input
+          type="checkbox"
+          formControlName="in-progress"
+          (change)="onChange()"
+        />
+      </div>
+      <div class="form-group">
+        <label class="filter-header">finished</label>
+        <input
+          type="checkbox"
+          formControlName="finished"
+          (change)="onChange()"
+        />
+      </div>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="summary header">
+      <h1 class="content">Purchase Date</h1>
+      <h1 class="content">Unit Price</h1>
+      <h1 class="content">Starts</h1>
+      <h1 class="content">Ends</h1>
+      <h1 class="content">Location</h1>
+      <h1 class="content">Tickets</h1>
+      <h1 class="content">Status</h1>
+    </div>
+    <app-record *ngFor="let i of purchase | filterPipe : checked" [data]="i">
+    </app-record>
+  </div>
+  <!-- <div *ngFor="let el of purchase">
+      <ul>
+        <li>{{ el.date }}</li>
+        <li>{{ el.trip.name }}</li>
+        <li>{{ el.trip.price }}</li>
+        <li>{{ el.num }}</li>
+      </ul>
+    </div> -->
+</div>

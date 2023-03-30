@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="summary">
+    <div class="header header1">
+      <h1 class="content">Trip Name</h1>
+      <h1 class="content">Booked Amount</h1>
+      <h1 class="content">Unit Price</h1>
+    </div>
+    <app-shopping-card-item
+      class="header"
+      *ngFor="let currtrip of tripValNames"
+      [trip]="currtrip"
+      [singleTripNum]="tripVals.get(currtrip)"
+      [value]="totalNum"
+    ></app-shopping-card-item>
+
+    <div class="header header1 wrap-up">
+      <h1 class="content">Total :</h1>
+      <h1 class="content">{{ totalNum }}</h1>
+      <h1 class="content">{{ totalPrice }}$</h1>
+    </div>
+  </div>
+</div>

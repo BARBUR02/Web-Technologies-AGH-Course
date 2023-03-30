@@ -1,0 +1,22 @@
+.header {
+    width: 100%;
+    color: #f4f4f4;
+    border-bottom: solid 2px burlywood;
+    padding: 20px 0;
+
+}
+
+.content {
+    font-size: 1.3rem;
+    padding: 4px 12px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.highlight{
+    color: orangered;
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+<div class="container">
+  <p class="film">{{ actor_name }}</p>
+  <p class="film">{{ actor_surname }}</p>
+  <p class="film">{{ filmTitle }}</p>
+  <p>{{ 2 + 2 }}</p>
+  <p>{{ actor_name.length }}</p>
+  <p>{{ actor_name.toUpperCase() }}</p>
+  <!-- <p >{{ windows.location.href }}</p> -->
+</div>
+<div class="input-area">
+  <input type="text" placeholder="Podaj imie :" #inputFirstName />
+  <input type="text" placeholder="Podaj nazwisko: " #inputLastName />
+  <input type="text" placeholder="Podaj Tytul" #inputTitle />
+  <button
+    class="btn"
+    (click)="onBtnClick(inputFirstName, inputLastName, inputTitle)"
+  >
+    Update Data
+  </button>
+</div>

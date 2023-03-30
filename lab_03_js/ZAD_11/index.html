@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/72ebeb10f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Zadanie 11</title>
+  </head>
+  <body>
+    <section id="main-page">
+      <div class="inputs-area">
+        <input type="text" id="country-name"  class="filter" placeholder="Search for country">
+        <input type="text" id="country-capital" class="filter" placeholder="Search for capital">
+      </div>
+      <div class="flex-main-container">
+        <div class="grid-table-header subregion-row">
+          <h1 class="name-header header" data-cmp="sortedSubregionsName">
+            Nazwa <i class="fa-solid fa-circle-chevron-up sub-arrow" data-cmp="sortedSubregionsNameD"></i>
+            <i class="fa-solid fa-circle-chevron-down sub-arrow" data-cmp="sortedSubregionsName"></i>
+          </h1>
+          <h1
+            class="population-header header"
+            data-cmp="sortedSubregionsPopulation"
+          >
+            Populacja <i class="fa-solid fa-circle-chevron-up sub-arrow" data-cmp="sortedSubregionsPopulationD"></i>
+            <i class="fa-solid fa-circle-chevron-down  sub-arrow" data-cmp="sortedSubregionsPopulation"></i>
+          </h1>
+          <h1 class="area-header header" data-cmp="sortedSubregionsArea">
+            Powierzchnia <i class="fa-solid fa-circle-chevron-up sub-arrow" data-cmp="sortedSubregionsAreaD"></i>
+            <i class="fa-solid fa-circle-chevron-down sub-arrow" data-cmp="sortedSubregionsArea"></i> </i>
+          </h1>
+        </div>
+        <div class="subregion-innerhtml"></div>
+        <section id="btn-control-section">
+          <div class="big-btns-container">
+            <div class="first-btn page-btn">previous</div>
+            <div class="last-btn page-btn">next</div>
+          </div>
+          <div class="page-nums">
+            <div id="page-0" class="page-num-div" data-num="0">1</div>
+            <div id="page-1" class="page-num-div" data-num="1">2</div>
+            <div id="page-2" class="page-num-div" data-num="2">3</div>
+            <div id="page-3" class="page-num-div" data-num="3">4</div>
+            <div id="page-4" class="page-num-div" data-num="4">5</div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

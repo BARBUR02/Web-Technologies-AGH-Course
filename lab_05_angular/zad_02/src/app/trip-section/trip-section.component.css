@@ -1,0 +1,38 @@
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    padding:30px 40px;
+    background: #f4f4f4;
+    border: 2px solid black;
+    border-right:none;
+}
+
+p{
+    color:aqua;
+}
+
+
+.sidebar {
+    position: absolute;
+    top: 0px;
+    width: 300px;
+    bottom: 0;
+    left: 0;
+    border: 2px solid black;
+    border-left: none;
+}
+
+.container {
+    /* height: 100%;
+    width:100%;
+    grid-area: main; */
+    position: absolute;
+    top: 80px;
+    top:0;
+    left: 300px;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    /* padding: 60px 0; */
+    /* background: red; */
+}

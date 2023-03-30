@@ -1,0 +1,7 @@
+<div class="container">
+  <!-- <li *ngFor="let i of photosList">{{ i.title }}</li> -->
+  <app-photo-item
+    *ngFor="let photo of photosList"
+    [photo]="photo"
+  ></app-photo-item>
+</div>

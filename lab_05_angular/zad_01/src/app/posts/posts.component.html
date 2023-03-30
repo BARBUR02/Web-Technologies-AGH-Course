@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="form-div">
+    <form class="post-form" [formGroup]="postAddForm">
+      <div class="form-group">
+        <label for="userId">UserID</label>
+        <input
+          type="number"
+          id="userId"
+          class="form-control"
+          formControlName="userId"
+        />
+        <span
+          class="warning"
+          *ngIf="
+            !postAddForm.get('userId').valid &&
+            postAddForm.get('userId').touched
+          "
+        >
+          Please Enter a number
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="Id">ID</label>
+        <input
+          type="number"
+          id="Id"
+          class="form-control"
+          formControlName="id"
+        />
+        <span
+          class="warning"
+          *ngIf="!postAddForm.get('id').valid && postAddForm.get('id').touched"
+        >
+          Please Enter a number
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          id="title"
+          class="form-control"
+          formControlName="title"
+        />
+        <span
+          class="warning"
+          *ngIf="
+            !postAddForm.get('title').valid && postAddForm.get('title').touched
+          "
+        >
+          Please Enter a title
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="body">Post body:</label>
+        <textarea
+          id="body"
+          class="form-control"
+          cols="60"
+          rows="10"
+          formControlName="body"
+        ></textarea>
+        <span
+          class="warning"
+          *ngIf="
+            !postAddForm.get('body').valid && postAddForm.get('body').touched
+          "
+        >
+          Please Enter post content
+        </span>
+      </div>
+    </form>
+    <div class="col">
+      <div class="submit-btn" (click)="addPost()">ADD POST</div>
+      <div class="info"></div>
+    </div>
+  </div>
+  <app-post *ngFor="let post of postList" [post]="post"></app-post>
+</div>

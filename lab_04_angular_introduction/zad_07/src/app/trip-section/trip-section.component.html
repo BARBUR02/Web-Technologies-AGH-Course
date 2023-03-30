@@ -1,0 +1,19 @@
+<div class="container">
+  <app-trip-item
+    *ngFor="
+      let trip of trips
+        | countryPipe : countries
+        | pricePipe : prices
+        | datePipe : dates
+        | starPipe : clicked : tripRatings
+    "
+    [trip]="trip"
+    [avaiable]="
+      tripCountMap.has(trip)
+        ? trip.places - tripCountMap.get(trip)
+        : trip.places
+    "
+    [maxPrice]="maxPrice"
+    [minPrice]="minPrice"
+  ></app-trip-item>
+</div>

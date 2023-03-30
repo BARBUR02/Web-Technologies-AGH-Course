@@ -1,0 +1,39 @@
+<div class="header">
+  <h1 class="company-name"><span class="company-name"> TripperMOOD </span></h1>
+  <div class="info-section">
+    <app-booked-trip-info></app-booked-trip-info>
+    <app-booked-trip-amount></app-booked-trip-amount>
+  </div>
+  <div class="action-btns">
+    <div class="btn">
+      <h1
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home
+      </h1>
+    </div>
+    <div class="btn">
+      <h1
+        routerLink="/trips-for-you"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Trips for You
+      </h1>
+    </div>
+    <div class="btn">
+      <h1 routerLink="/trip-add-form" routerLinkActive="active">
+        Add new Trip
+      </h1>
+    </div>
+    <div class="btn">
+      <h1 routerLink="/shopping-card" routerLinkActive="active">Shoppings</h1>
+    </div>
+
+    <div class="btn">
+      <h1 routerLink="/shopping-history" routerLinkActive="active">History</h1>
+    </div>
+  </div>
+</div>

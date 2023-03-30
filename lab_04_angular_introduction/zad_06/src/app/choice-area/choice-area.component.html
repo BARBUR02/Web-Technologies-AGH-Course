@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Wybierz Temat</h1>
+  <div class="choice-container">
+    <app-choice-item
+      *ngFor="let item of parentData"
+      [infoObject]="item"
+    ></app-choice-item>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.container,
+.color-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.color-section {
+    margin-left: 40px;
+    margin-top: 80px;
+}
+
+
+.custom-select {
+    position: relative;
+    width: 200px;
+    margin: 20px 40px;
+    height: 40px;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-select select {
+    display: none;
+}

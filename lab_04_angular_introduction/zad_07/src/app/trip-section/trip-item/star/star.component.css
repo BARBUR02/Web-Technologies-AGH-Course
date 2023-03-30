@@ -1,0 +1,13 @@
+.star {
+    font-size: 1.4rem;
+    margin: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.fill{
+    color: burlywood;
+}
+
+.star:hover{
+    transform: scale(1.3);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/72ebeb10f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Zadanie 8</title>
+  </head>
+  <body>
+    <main id="main-page">
+      <section id="main-content">
+        <div class="input-container">
+          <h2 class="label">New Password</h2>
+          <div class="input-div">
+            <input
+              type="password"
+              id="main-password"
+              placeholder="Enter password"
+              class="input-area"
+            />
+            <i class="fa-regular fa-eye-slash"></i>
+            <!-- <i class="fa-regular fa-eye active hidden "></i> -->
+          </div>
+        </div>
+        <div class="input-container">
+          <h2 class="label">Repeat new password</h2>
+          <div class="input-div">
+            <input type="password" id="repeat-password" class="input-area" />
+            <i class="fa-regular fa-eye-slash"></i>
+            <!-- <i class="fa-regular fa-eye hidden active"></i> -->
+          </div>
+        </div>
+        <section id="indicator-section">
+          <h2 class="label">Password requirements</h2>
+          <h3 id="character-count" class="indicator">
+            <i class="fa-solid fa-circle-xmark"></i> at least 8 characters
+          </h3>
+          <h3 id="character-special" class="indicator">
+            <i class="fa-solid fa-circle-xmark"></i> at least one special letter
+          </h3>
+          <h3 id="character-capital" class="indicator">
+            <i class="fa-solid fa-circle-xmark"></i> at least one capital letter
+          </h3>
+          <h3 id="character-digit" class="indicator">
+            <i class="fa-solid fa-circle-xmark"></i> at least one digit
+          </h3>
+          <!-- <i class="fa-solid fa-circle-check"></i> -->
+        </section>
+      </section>
+      <section id="user-info" class="hidden">
+        <i class="fa-solid fa-square-xmark feedback-icon"></i>
+        <!-- <i class="fa-solid fa-square-xmark"></i> -->
+        <p class="feedback-info">SPRAWDZ ZGODNOSC HASEL</p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

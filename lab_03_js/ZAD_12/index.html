@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/72ebeb10f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Zadanie 11</title>
+  </head>
+
+  <body>
+    <div id="board">
+      <!-- <div class="fade"></div> -->
+      <div id="user-intro" class="overlay-style segment">
+        <div class="nick-input">
+          <h1>Your nick:</h1>
+          <input
+            type="text"
+            class="nick-input-area"
+            placeholder="Input your nick"
+          />
+          <h2 class="note">MUST HAVE:</h2>
+          <h3 class="note capital-letter">
+            <i class="fa-solid fa-circle-xmark password-icon capital ind"></i
+            >CAPITAL LETTER
+          </h3>
+          <h3 class="note capital-letter">
+            <i class="fa-solid digit fa-circle-xmark password-icon ind"></i
+            >DIGIT
+          </h3>
+          <div class="ready-btn">READY TO PLAY !</div>
+        </div>
+      </div>
+
+      <div id="ranking-area" class="overlay-style segment">
+        <h1 class="current-score">
+          YOUR SCORE : <span class="current-score-value">0</span>
+        </h1>
+        <h1 class="highscores-header">HIGHSCORES</h1>
+        <ol class="highscores"></ol>
+        <div class="new-game-btn">START NEW GAME</div>
+      </div>
+
+      <div class="live-game-info overlay-style segment">
+        <div class="nick-container">
+          <span class="nick-highlighter">NICK :</span>
+          <h1 class="live-game-nick">Kuba Barber</h1>
+        </div>
+        <h1 class="live-game-score">0</h1>
+      </div>
+
+      <div class="cursor hidden">
+        <div class="cursor-dot"></div>
+      </div>
+      <!-- <div class="zombie"></div> -->
+
+      <!-- <div id="cursor"></div> -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

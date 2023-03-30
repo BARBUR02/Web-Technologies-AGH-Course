@@ -1,0 +1,114 @@
+[
+    {
+        "name":"Amazing Island",
+        "destination":"Teneryfa",
+        "places": 12,
+        "startDate":"2023-12-10",
+        "endDate":"2023-12-10",
+        "price": 600,
+        "currency":"dollar",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/teneryfa.jpg"
+    }
+    ,
+    {
+        "name":"Living City",
+        "destination":"Barcelona",
+        "places": 8,
+        "startDate":"2023-06-13",
+        "endDate":"2023-06-20",
+        "price": 700,
+        "currency":"euro",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/barcelona.jpg"
+    }
+    ,
+    {
+        "name":"Ich bin ein Berliner",
+        "destination":"Berlin",
+        "places": 8,
+        "startDate":"2023-05-10",
+        "endDate":"2023-05-12",
+        "price": 500,
+        "currency":"euro",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/berlin.jpg"
+    },
+    {
+        "name":"Chill on Beach",
+        "destination":"Antalya",
+        "places": 6,
+        "startDate":"2023-07-21",
+        "endDate":"2023-07-27",
+        "price": 800,
+        "currency":"PLN",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/antalya.jpg"
+    },
+    {
+        "name":"City of Kings",
+        "destination":"Krakow",
+        "places": 9,
+        "startDate":"2023-06-04",
+        "endDate":"2023-06-10",
+        "price": 400,
+        "currency":"PLN",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/krakow.jpg"
+    },
+    {
+        "name":"Night Life",
+        "destination":"New York",
+        "places": 5,
+        "startDate":"2023-02-26",
+        "endDate":"2023-03-03",
+        "price": 900,
+        "currency":"$",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/new_york.jpg"
+    },
+    {
+        "name":"Ancient Legacy",
+        "destination":"Rzym",
+        "places": 16,
+        "startDate":"2023-09-01",
+        "endDate":"2023-09-03",
+        "price": 700,
+        "currency":"Euro",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/rzym.jpg"
+    },
+    {
+        "name":"Unesco Canyon",
+        "destination":"Colorado Canyon",
+        "places": 7,
+        "startDate":"2023-11-10",
+        "endDate":"2023-11-14",
+        "price": 1000,
+        "currency":"$",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/colorado_canyon.jpg"
+    },
+    {
+        "name":"City of Love",
+        "destination":"Paryż",
+        "places": 10,
+        "startDate":"2023-07-22",
+        "endDate":"2023-07-23",
+        "price": 500,
+        "currency":"euro",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/paris.jpg"
+    },
+    {
+        "name":"Tropical Adventure",
+        "destination":"Hawai",
+        "places": 7,
+        "startDate":"2023-10-10",
+        "endDate":"2023-10-13",
+        "price": 900,
+        "currency":"$",
+        "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quisquam amet, temporibus rerum nulla quas!",
+        "img":"/assets/img/trip_01.jpg"
+    }
+]

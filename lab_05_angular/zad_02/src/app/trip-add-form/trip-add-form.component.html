@@ -1,0 +1,53 @@
+<div class="container">
+  <form
+    class="form"
+    id="form-el"
+    [formGroup]="reactiveForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <label for="trip-name">Trip Name:</label>
+    <input type="text" class="form-item" formControlName="name" />
+
+    <label for="trip-country">Trip Country:</label>
+    <input type="text" class="form-item" formControlName="destination" />
+
+    <label for="trip-start-date">Starts on:</label>
+    <input type="date" class="form-item" formControlName="startDate" />
+
+    <label for="trip-end-date">Ends on:</label>
+    <input type="date" class="form-item" formControlName="endDate" />
+
+    <label for="trip-desc">Short Description:</label>
+    <textarea
+      name=""
+      id=""
+      cols="45"
+      rows="4"
+      class="form-text-area"
+      formControlName="description"
+    ></textarea>
+
+    <div class="horizontal">
+      <div class="vertical">
+        <label for="trip-name" class="special">Price:</label>
+        <input type="number" class="form-item" formControlName="price" />
+      </div>
+      <div class="vertical">
+        <label for="trip-name" class="special">Places:</label>
+        <input type="number" class="form-item" formControlName="places" />
+      </div>
+    </div>
+    <label for="trip-img">Img source:</label>
+    <input type="text" class="form-item" formControlName="img" />
+    <!-- <input type="submit" /> -->
+  </form>
+  <div class="right-side">
+    <div class="hor">
+      <h1>Supply our collection!</h1>
+      <div class="submit">Submit Form</div>
+    </div>
+    <div class="info-div">
+      <h2 class="invalid-info">{{ invalidInfo }}</h2>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.output-area {
+    padding: 10px 7px;
+    border-radius: 7px;
+    width: 400px;
+    min-height: 70px;
+    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heading{
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: center;
+    padding: 8px 12px 0px 12px;
+
+}
+
+.description {
+    font-size: 0.8rem;
+    padding: 0px 12px 8px 12px;
+    width:80%;
+}

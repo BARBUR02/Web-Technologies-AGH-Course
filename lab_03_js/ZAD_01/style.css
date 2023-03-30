@@ -1,0 +1,37 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+#main-page{
+    height:100vh;
+    width:100vw;
+    background: #333;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn{
+    padding:15px 20px;
+    margin-bottom:40px;
+    background: #f3f3f3;
+    color: teal;
+    border:teal 1px solid;
+    border-radius: 11px;
+    cursor: pointer;
+}
+
+#namespace{
+    height:50px;
+    width:240px;
+    padding:5px 8px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f3f3;
+    color:teal;
+    border: teal 1px solid;
+}

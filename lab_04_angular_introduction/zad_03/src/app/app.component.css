@@ -1,0 +1,40 @@
+p{
+    margin: 8px 20px;
+    padding: 6px 10px;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.input-area{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+input{
+    padding: 8px 10px;
+    margin: 4px 6px;
+}
+
+.btn{
+    padding:15px 8px;
+    background: greenyellow;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-left: 12px;
+
+}
+
+.film{
+    padding: 5px 10px;
+    background: #333;
+    color: white;
+    width:80px;
+    height: 40px;
+    margin: 10px 0;
+}

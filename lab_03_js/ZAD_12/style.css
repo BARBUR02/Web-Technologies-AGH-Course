@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Pangolin&family=Permanent+Marker&family=Ubuntu&display=swap');
+/*font-family: 'Permanent Marker',
+cursive; */
+
+:root{
+    --green-bg: rgb(3, 140, 3);
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+}
+
+h1{
+    font-family: 'Permanent Marker',
+            cursive;
+    font-size: 3rem;
+    color:#f4f4f4;
+    letter-spacing: 0.06rem;
+}
+
+#board{
+    background: url(./images/board-bg.jpg) no-repeat center center/cover  ;
+
+    height: 100vh;
+    width:100vw;
+    /* min-height:800px; */
+    overflow: hidden;
+    position:relative;
+}
+
+
+
+
+.overlay-style {
+    padding: 15px 30px;
+    position: absolute;
+    left:0;
+    top:0;
+    font-family: 'Permanent Marker',
+    cursive;
+    background-image: linear-gradient(to right, rgba(67, 67, 67,0.8) 0%, rgba(0, 0, 0,0.8) 100%);
+    /* right:0; */
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color:white;
+    /* display: none; */
+}
+
+/* #user-intro {
+    display: none;
+}
+
+#ranking-area{
+    display: none;
+} */
+
+.nick-input h1{
+    margin-top:40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nick-input-area{
+    /* align-self: center; */
+    height:70px;
+    width:300px;
+    padding: 10px 20px;
+    border-radius: 12px; 
+    border: 6px solid #333;
+    outline: none;
+    font-size: 2rem;
+    font-family: 'Pangolin', cursive;
+    margin-bottom:25px;
+}
+
+.nick-input h2{
+    font-size: 1.4rem;
+    margin-bottom:8px;
+}
+
+.password-icon{
+    margin-right: 8px;
+}
+
+.nick-input h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.ind{
+    color: red;
+}
+
+.ready-btn{
+    margin-top: 40px;
+    height:100px;
+    width:250px;
+    background: var(--green-bg);
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.current-score{
+    font-size: 4rem;
+    color: yellowgreen;
+}
+
+.current-score-value{
+    color: var(--green-bg);
+}
+
+.highscores-header{
+    font-size: 3rem;
+}
+
+.highscore-record{
+    /* width:80%; */
+    display: grid;
+    grid-template-columns:0.3fr 1fr 1fr 1fr;
+    grid-gap: 1.2rem;
+    text-align: start;
+    margin:12px 0;
+}
+
+
+
+.new-game-btn{
+    background: var(--green-bg);
+    /* background: #f4f4f4; */
+    height:80px;
+    width:290px;
+    border-radius: 8px;
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+
+.live-game-info {
+    background: transparent;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nick-container{
+    justify-content: center;
+    align-items: baseline;
+    display:flex;
+    flex-direction: row;
+    font-size: 1.6rem;
+}
+
+.nick-highlighter{
+    font-size: 1.5rem;
+    color: rgb(3, 140, 3);
+    /* border:  rgb(3, 140, 3); */
+    /* border-bottom: 2px solid rgb(3, 140, 3); */
+    font-weight: 700;
+}
+
+.live-game-score{
+    font-size: 4rem;
+    margin: 8px 20px;    
+    font-family: 'Inconsolata', monospace;
+}
+
+.live-game-nick{
+    font-size: 1.6rem;
+    margin: 0 15px;
+}
+
+.cursor{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width:55px;
+    background: transparent;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.8);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 100;
+    pointer-events: none;
+}
+.cursor-dot{
+    height:8px;
+    width:8px;
+    background: red;
+    border-radius: 50%;
+}
+
+.zombie{
+    width:200px;
+    height:312px;
+    background: url('./images/walkingdead.png');
+    position:absolute;
+    left : 110%;
+    bottom:100px;
+    animation: zombieEffect 0.5s 0s infinite steps(9),
+    zombieWalk 10s 0s 1 linear;
+}
+.green{
+    color: var(--green-bg);
+}
+
+.hidden{
+    display:none;
+}
+
+@keyframes zombieEffect{
+    100%{
+    background-position: -1800px 0;
+}}
+
+@keyframes zombieWalk {
+    100%{
+        left: -300px;
+    }
+}

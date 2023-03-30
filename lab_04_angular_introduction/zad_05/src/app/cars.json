@@ -1,0 +1,115 @@
+[
+ {
+  "brand": "Volkswagen",
+  "model": "Passat",
+  "colors": ["blue","red","green","black","lightgrey","orangered"],
+   "features": {
+     "engine" : 1.8,
+     "type": "sport",
+     "length":"6.2m",
+     "width": "2.8m"
+ }
+ },
+{
+  "brand": "Volkswagen",
+  "model": "Golf",
+  "colors": ["blue","red","green","black","lightgrey","yellow","orange","pink"],
+  "features": {
+     "engine" : 2.2,
+     "type": "somfort",
+     "length":"6.m",
+     "width": "2.3m"
+ }
+},
+  {
+  "brand": "Skoda",
+  "model": "Fabia",
+  "colors": ["blue","red","green","black","yellow","pink"],
+    "features": {
+     "engine" : 1.6,
+     "type": "economic",
+     "length":"5.8m",
+     "width": "2.7m"
+ }
+},
+  {
+  "brand": "Skoda",
+  "model": "Octavia",
+  "colors": ["blue","red","pink"],
+    "features": {
+     "engine" : 2.2,
+     "type": "sport/comfort",
+     "length":"6.0m",
+     "width": "2.9m"
+ }
+},
+  {
+  "brand": "Skoda",
+  "model": "Codiaq",
+  "colors": ["green","black","lightgrey","lightblue"],
+    "features": {
+     "engine" : 2.4,
+     "type": "sport/comfort",
+     "length":"6.5m",
+     "width": "3m"
+ }
+},
+ {
+  "brand": "Peugeot",
+  "model": "303",
+  "colors": ["blue","lightgrey","red"],
+   "features": {
+     "engine" : 1.8,
+     "type": "sport/economic",
+     "length":"5.5m",
+     "width": "2.4m"
+ }
+},
+{
+  "brand": "Peugeot",
+  "model": "308",
+  "colors": ["blue","red","lightgrey","grey","darkgreen"],
+  "features": {
+     "engine" : 2.2,
+     "type": "familycar",
+     "length":"6.1m",
+     "width": "3m"
+ }
+},
+
+{
+  "brand": "Ford",
+  "model": "Focus",
+  "colors": ["blue","red","lightgrey","grey","black"],
+  "features": {
+     "engine" : 1.8,
+     "type": "economic/comfort",
+     "length":"5.7m",
+     "width": "2.6m"
+ }
+},
+{
+  "brand": "Ford",
+  "model": "Fiesta",
+  "colors": ["blue","grey","black"],
+  "features": {
+     "engine" : 1.6,
+     "type": "economic",
+     "length":"5.5m",
+     "width": "2.3m"
+ }
+},
+
+{
+  "brand": "Ford",
+  "model": "Mondeo",
+  "colors": ["lightgrey","red","grey","black"],
+  "features": {
+     "engine" : 1.8,
+     "type": "sport",
+     "length":"6.2m",
+     "width": "2.8m"
+ }
+}
+
+]

@@ -1,0 +1,35 @@
+<div class="page">
+  <header class="flex-header">
+    <div class="logo">LOGO</div>
+    <div class="nav-menu">
+      <li>
+        <a
+          class="item"
+          routerLink="home"
+          [routerLinkActive]="'active-link'"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Home</a
+        >
+      </li>
+      <li>
+        <a class="item" routerLink="posts" [routerLinkActive]="'active-link'">
+          Posts</a
+        >
+      </li>
+      <li>
+        <a
+          class="item"
+          routerLink="photos"
+          [routerLinkActive]="'active-link'"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Photos</a
+        >
+      </li>
+    </div>
+  </header>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

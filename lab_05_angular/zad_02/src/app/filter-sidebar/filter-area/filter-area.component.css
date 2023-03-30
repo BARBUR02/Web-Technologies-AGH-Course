@@ -1,0 +1,147 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.date-filter{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.date-label{
+    background: #333;
+    color: burlywood;
+    width:100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;    
+    font-size: 1.2rem ;
+    border-radius: 6px;
+    padding: 3px 5px;
+    margin: 4px 2px;
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.6);
+}
+
+input[type='date']{
+    padding: 3px 2px;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin: 0 3px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-form{
+    margin: 20px 0;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.price-label{
+    background: #333;
+        color: burlywood;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.2rem;
+        border-radius: 6px;
+        padding: 8px 12px;
+        margin: 4px 2px;
+        box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.6);
+}
+
+.btn{
+    font-size: 0.9rem;
+    margin: 3px 2px;
+    padding: 6px 10px;
+    color: #333;
+    font-weight: bold;
+    border: 2px solid #333;
+    border-radius: 6px;
+    background: greenyellow;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.star-filter{
+    /* margin-top: 20px; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star-header{
+    margin-top:20px;
+    font-size: 1.2rem;
+    background: #333;
+    color: burlywood;
+    padding: 6px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.star-label{
+    font-size: 1rem;
+    padding: 6px 10px;
+    background: #333;
+    color :#f4f4f4;
+    border-radius: 50%;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+
+.select-country{
+    width:100%;
+}
+
+
+
+
+.country-header{
+    margin: 10px 0;
+    font-size: 1.2rem;
+    background: #333;
+    color: burlywood;
+    padding: 6px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.6);
+}
+
+.country-list{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.country-item{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.7rem;
+    padding: 4px 3px;
+    margin-bottom: 3px;;
+}

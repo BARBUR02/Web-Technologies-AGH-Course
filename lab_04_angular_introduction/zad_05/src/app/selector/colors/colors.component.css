@@ -1,0 +1,9 @@
+.item {
+    background: #333;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    margin-right: 9px;
+    cursor: pointer;
+}

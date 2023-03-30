@@ -1,0 +1,7 @@
+<div class="item">
+  <h2 class="header album-id flex-item">Album ID : {{ photo.albumId }}</h2>
+  <!-- <h2 class="header album-id flex-item">ID : {{ photo.id }}</h2> -->
+  <h2 class="header title flex-item">Title: {{ photo.title }}</h2>
+  <img class="photo flex-item" src="{{ photo.url }}" alt="{{ photo.title }}" />
+  <a class="link" (click)="onClick()">VIEW</a>
+</div>

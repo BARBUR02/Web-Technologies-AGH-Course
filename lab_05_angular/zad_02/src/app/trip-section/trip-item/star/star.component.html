@@ -1,0 +1,9 @@
+<div class="star">
+  <fa-icon
+    [icon]="faStar"
+    (mouseenter)="onStarEnter()"
+    (mouseleave)="onStarLeave()"
+    (click)="onStarClicked()"
+    [ngClass]="{ fill: rating >= starId }"
+  ></fa-icon>
+</div>

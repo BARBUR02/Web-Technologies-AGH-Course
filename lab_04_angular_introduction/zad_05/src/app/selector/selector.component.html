@@ -1,0 +1,25 @@
+<div class="container">
+  <select class="custom-select" required (change)="newBrand($event)">
+    <option value="0" disabled selected hidden #tmpValue>Select Car</option>
+    <option *ngFor="let brand of brands" [value]="brand">
+      <app-brand [name]="brand"></app-brand>
+    </option>
+  </select>
+  <div *ngIf="chosenBrand">
+    <select class="custom-select" (change)="newModel($event)">
+      <option value="0" disabled selected hidden #tmpModel id="model-sel">
+        Select Model
+      </option>
+      <option *ngFor="let car of models" [value]="car.model">
+        <app-model [model]="car.model"></app-model>
+      </option>
+    </select>
+  </div>
+</div>
+<div class="color-section" *ngIf="chosenModel">
+  <app-colors
+    [color]="color"
+    *ngFor="let color of currentChoiceModel?.colors"
+    [car]="currentChoiceModel"
+  ></app-colors>
+</div>

@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.3rem;
+  color: #444;
+  font-weight: bold;
+}
+
+#main-conent {
+  height: 100vh;
+  width: 100vw;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.hover-helper {
+  perspective: 1200px;
+  margin: 40px 60px;
+  width: 360px;
+  height: 550px;
+}
+
+.hover-helper:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  /* perspective: 1200px;
+  margin: 40px 60px; */
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  /* padding-bottom: 5px; */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  transition: all 0.8s ease-in-out;
+}
+.photo-part {
+  /* flex: ; */
+  height: 40%;
+  flex: 6;
+  overflow: hidden;
+  position: relative;
+  /* background: url("./img/nature1.jpg") no-repeat center
+    center/cover; */
+}
+
+.orange-card .front-page .photo-part::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("./img/nature1.jpg") no-repeat center
+    center/cover;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  /* z-index: -3; */
+  z-index: 0;
+}
+
+.orange-card .front-page .photo-part::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(239, 148, 21, 0.4);
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  z-index: 1;
+}
+
+.photo-part * {
+  z-index: 2;
+  position: relative;
+}
+
+.description {
+  flex: 7;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: 20px; */
+  /* overflow: hidden; */
+}
+
+.text-item {
+  width: 70%;
+  padding: 15px 30px;
+  text-align: center;
+  border-bottom: 1px lightgrey solid;
+}
+
+.text-item:last-child {
+  border-bottom: none;
+}
+
+.orange-card .front-page .heading-container > h1 {
+  /* position: absolute; */
+  padding: 25px 25px;
+  color: white;
+  font-weight: 100;
+  background-color: rgba(239, 148, 21, 0.7);
+}
+.lower {
+  margin-right: 5px;
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.front-page,
+.back-page {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.orange-card .back-page {
+  background: rgb(255, 154, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 154, 0, 0.40940126050420167) 0%,
+    rgba(255, 154, 0, 0.4895133053221288) 0%
+      rgba(255, 154, 0, 1) 70%
+  );
+
+  /* z-index: 2 */
+  display: flex;
+}
+
+/* .card {
+  transform: rotateY(180deg);
+} */
+
+.back-page {
+  transform: rotateY(180deg);
+}
+
+.back-page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  text-align: center;
+  padding-bottom: 70px;
+  font-weight: 400;
+}
+
+.price {
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 150px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.back-btn {
+  text-decoration: none;
+  background: white;
+  padding: 22px 35px;
+  border-radius: 19px;
+  color: #444;
+  transition: all 0.5s ease-in-out;
+}
+
+.orange-card .back-btn:hover {
+  background: greenyellow;
+  box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.1rem;
+  /* padding: 25px 35px; */
+  /* font-size: 1rem; */
+}
+
+.green-card .front-page .photo-part::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("./img/nature2.jpg") no-repeat center
+    center/cover;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  /* z-index: -3; */
+  z-index: 0;
+}
+
+.green-card .front-page .photo-part::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(88, 212, 21, 0.4);
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  z-index: 1;
+}
+
+.green-card .front-page .heading-container > h1 {
+  /* position: absolute; */
+  padding: 25px 25px;
+  color: white;
+  font-weight: 100;
+  background-color: rgba(88, 212, 21, 0.7);
+}
+
+.green-card .back-page {
+  background: rgb(126, 193, 155);
+  background: linear-gradient(
+    96deg,
+    rgba(128, 193, 155, 1) 0%,
+    rgba(49, 174, 65, 1) 100%
+  );
+  /* z-index: 2 */
+  display: flex;
+}
+
+.green-card .back-btn:hover {
+  background: rgb(255, 154, 0);
+  box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.1rem;
+  /* padding: 25px 35px; */
+  /* font-size: 1rem; */
+}
+
+/*  */
+
+@media screen and (max-width: 800px) {
+  .hover-helper {
+    width: 250px;
+    height: 400px;
+  }
+  body {
+    font-size: 0.6rem;
+  }
+
+  .header {
+    font-size: 1rem;
+    letter-spacing: 0.04rem;
+    color: white;
+    text-align: center;
+    padding-bottom: 70px;
+    font-weight: 400;
+  }
+
+  .price {
+    font-size: 2rem;
+    letter-spacing: 0.04rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 400;
+    /* padding-bottom: 70px; */
+  }
+
+  .back-btn {
+    text-decoration: none;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 19px;
+    color: #444;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .orange-card .front-page .heading-container > h1 {
+    /* position: absolute; */
+    padding: 8px 8px;
+  }
+
+  .green-card .front-page .heading-container > h1 {
+    /* position: absolute; */
+    padding: 8px 8px;
+  }
+
+  .text-item {
+    /* width: 70%; */
+    padding: 8px 15px;
+    /* text-align: center;
+  border-bottom: 1px lightgrey solid; */
+  }
+
+  .green-card .back-btn:hover {
+    background: rgb(255, 154, 0);
+    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.08rem;
+    /* padding: 25px 35px; */
+    /* font-size: 1rem; */
+  }
+
+  .orange-card .back-btn:hover {
+    background: greenyellow;
+    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.08rem;
+    /* padding: 25px 35px; */
+    /* font-size: 1rem; */
+  }
+}

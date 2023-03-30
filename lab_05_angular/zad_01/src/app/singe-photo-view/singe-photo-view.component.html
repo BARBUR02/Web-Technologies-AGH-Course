@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="item" *ngFor="let photo of photo">
+    <div class="row">
+      <div class="col">
+        <h2 class="header">
+          <span class="highlight"> Album Id </span>: {{ photo.albumId }}
+        </h2>
+        <h2 class="header">
+          <span class="highlight">Id: </span> {{ photo.id }}
+        </h2>
+      </div>
+
+      <img
+        class="thumbnail"
+        src="{{ photo.thumbnailUrl }}"
+        alt="{{ photo.title }}"
+      />
+    </div>
+    <h2 class="header title">
+      <span class="highlight"> Title </span>: {{ photo.title }}
+    </h2>
+    <img class="main-img" src="{{ photo.url }}" alt="{{ photo.title }}" />
+  </div>
+</div>
